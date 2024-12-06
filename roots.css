@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #faf3f5, #f5f5f7);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+/* Navigation Styles (same as landing page) */
+.nav-container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e9b7ce;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e9b7ce;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e9b7ce;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+.section {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 2rem;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header h1 {
+    font-size: 2.8rem;
+    color: #2d2d2d;
+    margin-bottom: 1.5rem;
+}
+
+.section-header p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+.plant-gallery {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.plant-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    transform-origin: center;
+}
+
+.plant-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.plant-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.plant-card .card-content {
+    padding: 20px;
+    background: var(--accent-color);
+}
+
+.plant-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.blob {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
+    filter: blur(100px);
+    border-radius: 50%;
+}
+
+.blob-1 {
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: var(--primary-color);
+}
+
+.blob-2 {
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .plant-gallery {
+        grid-template-columns: 1fr;
+    }
+}

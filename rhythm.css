@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #faf3f5, #f5f5f7);
+    min-height: 100vh;
+    color: #2c3e50;
+}
+
+/* Navigation Styles (same as landing page) */
+.nav-container {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e9b7ce;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #e9b7ce;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e9b7ce;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+.rhythm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem;
+}
+
+.rhythm-header {
+    text-align: center;
+    padding: 3rem 0;
+    background: rgba(233, 183, 206, 0.1);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.rhythm-title {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #2c3e50, #e9b7ce);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rhythm-subtitle {
+    color: #5d6d7e;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.rhythm-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.rhythm-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.rhythm-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.rhythm-card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.rhythm-card-content {
+    padding: 1.5rem;
+}
+
+.rhythm-card-title {
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.rhythm-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #e9b7ce;
+}
+
+.rhythm-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.rhythm-tag {
+    background: #f8e5ee;
+    color: #2c3e50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.rhythm-quote {
+    text-align: center;
+    background: rgba(233, 183, 206, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+
+.rhythm-quote-text {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-style: italic;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.rhythm-nav {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.rhythm-nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rhythm-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.rhythm-logo span {
+    color: #e9b7ce;
+}
+
+.rhythm-nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.rhythm-nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.rhythm-nav-links a:hover {
+    color: #e9b7ce;
+}
+
+.rhythm-footer {
+    background: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rhythm-social-links {
+    margin: 1rem 0;
+}
+
+.rhythm-social-icon {
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: color 0.3s;
+}
+
+.rhythm-social-icon:hover {
+    color: #e9b7ce;
+}
+
+@media (max-width: 768px) {
+    .rhythm-section {
+        grid-template-columns: 1fr;
+    }
+
+    .rhythm-nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
